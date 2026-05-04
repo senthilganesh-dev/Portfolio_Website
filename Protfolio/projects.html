@@ -1,0 +1,54 @@
+<html>
+    <head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<meta charset="UTF-8">
+<title>Projects</title>
+    </head>
+    <body>
+            <div class="top-menu">
+            <h1>Portfolio</h1>
+            <a href="index.html" title="Home" style="text-decoration: none;background: transparent;"><i class="fa-solid fa-house"></i></a>
+
+              <a href="skills.html" style="text-decoration: none;">Skills</a>
+            <a href="projects.html" style="text-decoration: none;">Projects</a>
+            <a href="qualification.html" style="text-decoration: none;">Qualification</a>
+            <a href="#conc" style="text-decoration: none;">Contact</a>
+            
+        </div>
+        <div class="projects" id="prj">
+            <h3>My Projects</h3>
+            <div id="repo-container"></div>
+        </div>
+        <div class="contact" id="conc">
+    <h4>Contact</h4>
+    <address>
+        <p>Email: <a href="mailto:senthilganesh0000@gmail.com" style="text-decoration: none; color: white;">senthilganesh0000@gmail.com</a></p>
+        <p>Mobile number: 63816123</p>
+    </address>
+</div>
+    </body>
+        <script>
+    const username = "senthilganesh-dev";
+    const container = document.getElementById("repo-container");
+
+    fetch(`https://api.github.com/users/${username}/repos`)
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(repo => {
+          const card = document.createElement("div");
+          card.classList.add("repo-card");
+
+          card.innerHTML = `
+            <h4>${repo.name}</h4>
+            <p>${repo.description || "No description available"}</p>
+            <a href="${repo.html_url}" target="_blank">View Project</a>
+          `;
+
+          container.appendChild(card);
+        });
+      })
+      .catch(error => console.error(error));
+  </script>
+</html>
