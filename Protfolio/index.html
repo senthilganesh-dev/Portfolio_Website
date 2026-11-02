@@ -1,55 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Senthi Ganesh Paulraj.K</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Senthil Ganesh Paulraj K | Engineering & Software Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- Top Menu -->
-    <div class="top-menu">
-        <h1>Portfolio</h1>
-        <a href="skills.html" style="text-decoration: none;">Skills</a>
-        <a href="projects.html" style="text-decoration: none;">Projects</a>
-        <a href="qualification.html" style="text-decoration: none;">Qualification</a>
-        <a href="#conc" style="text-decoration: none;">Contact</a>
+  <!-- Top Editorial Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand">Senthil<span>.</span></a>
+      <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Featured Work</a></li>
+        <li><a href="#skills">Experience & Skills</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+      </ul>
     </div>
+  </header>
 
-    <!-- About Section with Image -->
-    <div class="about">
-        <div class="about-content">
+  <main class="container">
 
-            <!-- Profile Image -->
-            <div class="profile-img">
-                <img src="senthil.png" alt="Senthil">
-            </div>
-
-            <!-- About Text -->
-            <div class="about-text">
-                <h3>About Me:</h3>
-                <article>
-                    I am a first-year B.E. (ECE) student at Velammal College of Engineering and Technology.
-                    I am passionate about IoT, embedded systems, and new emerging technologies.
-                </article>
-            </div>
-
+    <!-- Slide 1: Hero Section ("Harlow Ellis" Card Style) -->
+    <section id="home" class="slide-card hero-card">
+      <div class="hero-content">
+        <span class="eyebrow">Electronics & Software Engineering Portfolio</span>
+        <h1>
+          <span class="accent-text">Senthil Ganesh</span><br />
+          Paulraj K
+        </h1>
+        <p class="hero-lead">
+          Building low-level systems, interactive 3D game engines, and digital hardware architectures from first principles.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">Explore Work</a>
+          <a href="https://github.com/senthilganesh-dev" target="_blank" rel="noopener" class="btn btn-outline">GitHub Profile</a>
         </div>
-    </div>
+      </div>
 
-    <!-- Contact Section -->
-    <div class="contact" id="conc">
-        <h4>Contact</h4>
-        <address>
-            <p>Email:
-                <a href="mailto:senthilganesh0000@gmail.com" style="text-decoration: none;color: white;">
-                    senthilganesh0000@gmail.com
-                </a>
-            </p>
-            <p>Mobile number: 63816123</p>
-        </address>
-    </div>
+      <div class="hero-visual">
+        <div class="arch-frame">
+          <!-- Replace src with your actual profile image path in the repo (e.g., assets/profile.jpg) -->
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Senthil Ganesh Paulraj K" onerror="this.style.display='none'" />
+          <div class="arch-fallback">SG</div>
+        </div>
+      </div>
+    </section>
 
-</body>
-</html>
+    <!-- Slide 2: About Me & Philosophy Split -->
+    <section id="about" class="slide-card about-card">
+      <div class="about-header">
+        <h2>About <br /><span class="accent-text">me</span></h2>
+      </div>
+
+      <div class="about-Quote">
+        <blockquote class="editorial-quote">
+          "I love engineering systems from the silicon gate level up to high-performance C++ applications and interactive virtual worlds."
+        </blockquote>
+        <p>
+          I am an Electronics and Communication Engineering (ECE) student based in Tamil Nadu, India, with a deep focus on modern C++ (C++20), Linux systems programming, digital logic design (Verilog HDL, FPGA/CPLD), and game development using Raylib and Unity.
+        </p>
+      </div>
+    </section>
+
+    <!-- Slide 3: Featured Work / Projects -->
+    <section id="work" class="slide-card work-card">
+      <div class="section-header">
+        <h2>Featured <br /><span class="accent-text">work</span></h2>
+        <p>Selected software prototypes, terminal utilities, and interactive game architectures.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 01 -->
+        <article class="project-item">
+          <div class="project-preview">
+            <span class="project-tag">C++20 / Raylib / 3D</span>
+          </div>
+          <div class="project-meta">
+            <span class="index-num">01</span>
+            <div>
+              <h3>Haunted Verse (Eclipse Protocol)</h3>
+              <p>3D multiplayer survival horror game built in C++ and Raylib featuring randomized item spawns, NPC clue systems, dynamic fog, and custom HUD controls.</p>
+              <a href="https://github.com/senthilganesh-dev" target="_blank" rel="noopener" class="project-link">View Source &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 02 -->
+        <article class="project-item">
+          <div class="project-preview">
+            <span class="project-tag">C++20 / std::filesystem / WSL</span>
+          </div>
+          <div class="project-meta">
+            <span class="index-num">02</span>
+            <div>
+              <h3>Terminal C++ File Manager</h3>
+              <p>High-performance Linux terminal file management system utilizing RAII, smart pointers, move semantics, and dynamic directory size calculation.</p>
+              <a href="https://github.com/senthilganesh-dev" target="_blank" rel="noopener" class="project-link">View Source &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 03 -->
+        <article class="project-item">
+          <div class="project-preview">
+            <span class="project-tag">Unity / C# / Cross-Platform</span>
+          </div>
+          <div class="project-meta">
+            <span class="index-num">03</span>
+            <div>
+              <h3>Solo Leveling Action RPG Prototype</h3>
+              <p>Interactive dark-fantasy RPG targeting Windows and Android with dynamic status windows, stat allocation, daily quest tracking, and shadow extraction mechanics.</p>
+              <a href="https://github.com/senthilganesh-dev" target="_blank" rel="noopener" class="project-link">View Source &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 04 -->
+        <article class="project-item">
+          <div class="project-preview">
+            <span class="project-tag">Verilog HDL / Digital Logic</span>
+          </div>
+          <div class="project-meta">
+            <span class="index-num">04</span>
+            <div>
+              <h3>Digital Architecture & HDL Modules</h3>
+              <p>Hardware description implementations covering magnitude comparators, synchronous counters, shift registers, and programmable logic (PAL/PLA/FPGA).</p>
+              <a href="https://github.com/senthilganesh-dev" target="_blank" rel="noopener" class="project-link">View Source &rarr;</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Slide 4: Experience & Technical Stack -->
+    <section id="skills" class="slide-card experience-card">
+      <div class="experience-split">
+        <div class="experience-intro">
+          <h2>Technical <br /><span class="accent-text"> Arsenal</span></h2>
+          <p>A combination of low-level electronics engineering and modern software craftsmanship.</p>
+        </div>
+
+        <div class="experience-list">
+          <div class="experience-item">
+            <span class="eyebrow">SYSTEMS & LANGUAGES</span>
+            <h3>Modern C++ (C++20), C#, Verilog HDL</h3>
+            <p>RAII, template metaprogramming, move semantics, STL algorithms, and competitive programming.</p>
+          </div>
+
+          <div class="experience-item">
+            <span class="eyebrow">ENGINES & TOOLS</span>
+            <h3>Linux (Ubuntu WSL / Arch), GCC & Clang++, Raylib, Unity</h3>
+            <p>Visual Studio Code, Git version control, custom build pipelines, and cross-platform deployment.</p>
+          </div>
+
+          <div class="experience-item">
+            <span class="eyebrow">DIGITAL ELECTRONICS (ECE)</span>
+            <h3>RTL Design, Combinational &
