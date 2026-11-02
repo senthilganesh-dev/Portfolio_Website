@@ -1,54 +1,39 @@
-<html>
-    <head>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
-<title>Projects</title>
-    </head>
-    <body>
-            <div class="top-menu">
-            <h1>Portfolio</h1>
-            <a href="index.html" title="Home" style="text-decoration: none;background: transparent;"><i class="fa-solid fa-house"></i></a>
-
-              <a href="skills.html" style="text-decoration: none;">Skills</a>
-            <a href="projects.html" style="text-decoration: none;">Projects</a>
-            <a href="qualification.html" style="text-decoration: none;">Qualification</a>
-            <a href="#conc" style="text-decoration: none;">Contact</a>
-            
-        </div>
-        <div class="projects" id="prj">
-            <h3>My Projects</h3>
-            <div id="repo-container"></div>
-        </div>
-        <div class="contact" id="conc">
-    <h4>Contact</h4>
-    <address>
-        <p>Email: <a href="mailto:senthilganesh0000@gmail.com" style="text-decoration: none; color: white;">senthilganesh0000@gmail.com</a></p>
-        <p>Mobile number: 63816123</p>
-    </address>
-</div>
-    </body>
-        <script>
-    const username = "senthilganesh-dev";
-    const container = document.getElementById("repo-container");
-
-    fetch(`https://api.github.com/users/${username}/repos`)
-      .then(response => response.json())
-      .then(data => {
-        data.forEach(repo => {
-          const card = document.createElement("div");
-          card.classList.add("repo-card");
-
-          card.innerHTML = `
-            <h4>${repo.name}</h4>
-            <p>${repo.description || "No description available"}</p>
-            <a href="${repo.html_url}" target="_blank">View Project</a>
-          `;
-
-          container.appendChild(card);
-        });
-      })
-      .catch(error => console.error(error));
-  </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Senthil Ganesh Paulraj</title>
+<meta name="description" content="Portfolio of Senthil Ganesh Paulraj, built live from GitHub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="projects">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html" id="brand">Portfolio</a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main">
+    <a href="index.html" data-nav="home">Home</a>
+    <a href="projects.html" data-nav="projects">Projects</a>
+    <a href="skills.html" data-nav="skills">Skills</a>
+    <a href="qualification.html" data-nav="qualification">Experience</a>
+  </nav>
+</header>
+<main id="main">
+<section>
+  <h1 class="page-h">Projects</h1>
+  <p class="lead">Every public repository, pulled live from GitHub.</p>
+  <div class="tools">
+    <label>Search <input type="search" id="q" placeholder="Type a project name"></label>
+    <label>Language <select id="lang"><option value="">All</option></select></label>
+  </div>
+  <div class="grid" id="projects" aria-live="polite">Loading…</div>
+</section>
+</main>
+<footer class="foot"><span id="foot-name"></span> Content updates automatically from <a href="https://github.com/senthilganesh-dev">GitHub</a>.</footer>
+<script src="script.js"></script>
+</body>
 </html>
